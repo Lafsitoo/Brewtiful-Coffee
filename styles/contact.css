@@ -1,0 +1,121 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* Body */
+body {
+  background-color: #bdb2a7;
+  height: 200vw;
+}
+
+/* Header */
+.navbar {
+  padding: 1rem 1.5rem 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff33;
+}
+
+.navbar-brand {
+  padding: 0 1rem 0 1rem;
+}
+.navbar-logo {
+  width: 150px;
+}
+.nav-item {
+  font-size: 1.1rem;
+}
+.nav-item-special {
+  visibility: hidden;
+}
+.nav-link {
+  font-weight: 500;
+}
+.nav-link {
+  color: #574942;
+}
+.navbar-nav .nav-link.active {
+  color: #2b1d1e;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.icon-container {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  background-color: #ffffff;
+}
+.icon-button img {
+  width: 70%;
+}
+.icon-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive Header */
+@media screen and (max-width: 1024px) {
+  .container-fluid {
+    padding: 0;
+    margin: 0;
+    padding-left: 0.5rem;
+  }
+  .navbar-toggler {
+    margin: 0;
+    border: none;
+  }
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+  .navbar-brand {
+    position: relative;
+    display: flex;
+    padding-right: 3.5rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  .offcanvas-header {
+    padding: 2rem 2rem 0 0;
+  }
+  .offcanvas-header .btn-close {
+    width: 50px;
+    height: 50px;
+  }
+  .offcanvas-header .btn-close:focus {
+    box-shadow: none;
+  }
+  .navbar-collapse {
+    padding: 4rem 1.8rem 0 1.8rem;
+  }
+  .nav-item {
+    font-size: 2rem;
+  }
+  .nav-item-special {
+    visibility: visible;
+    font-size: 2rem;
+  }
+  .nav-link {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #7c523a;
+  }
+  .nav-link:hover {
+    color: #2b1d1e;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+  }
+  .icon-container {
+    visibility: hidden;
+  }
+}
