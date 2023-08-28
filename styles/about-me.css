@@ -5,7 +5,7 @@ html {
 /* Body */
 body {
   background-color: #bdb2a7;
-  height: 200vw;
+  height: 100vw;
 }
 
 /* Header */
@@ -17,7 +17,13 @@ body {
   width: 100%;
   background-color: #ffffff33;
 }
-
+.navbar-toggler {
+  margin: 0;
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+}
 .navbar-brand {
   padding: 0 1rem 0 1rem;
 }
@@ -54,7 +60,7 @@ body {
   height: 50px;
   border-radius: 100%;
   border: none;
-  background-color: #ffffff;
+  background-color: #fbf8f5;
 }
 .icon-button img {
   width: 70%;
@@ -70,13 +76,6 @@ body {
     padding: 0;
     margin: 0;
     padding-left: 0.5rem;
-  }
-  .navbar-toggler {
-    margin: 0;
-    border: none;
-  }
-  .navbar-toggler:focus {
-    box-shadow: none;
   }
   .navbar-brand {
     position: relative;
@@ -117,5 +116,89 @@ body {
   }
   .icon-container {
     visibility: hidden;
+  }
+}
+
+/* Main */
+.divider {
+  border: solid 1px fuchsia;
+  padding: 2.5rem;
+}
+
+/* Responsive Main */
+@media screen and (max-width: 1024px) {
+  .divider {
+    padding: 2.4rem;
+  }
+}
+
+/* Footer */
+.footer {
+  border: solid 1px fuchsia;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #fbf8f5;
+  padding: 4rem 0 2rem 0;
+}
+.footer h3 {
+  font-weight: 600;
+  color: #b68969;
+}
+.footer p {
+  padding-bottom: 1rem;
+  color: #d8b083;
+}
+.footer ul {
+  padding-bottom: 0;
+  color: #d8b083;
+}
+.footer ul li span {
+  font-weight: 600;
+}
+.clock-icon {
+  width: 45px;
+  margin: 1rem 0 1rem 0;
+}
+.social-icon {
+  width: 35px;
+}
+.footer-logo {
+  width: 350px;
+  margin-bottom: 1rem;
+}
+hr {
+  border-color: #d8b083;
+  border-top-width: 3px;
+}
+
+@media screen and (max-width: 1024px) {
+  .footer {
+    padding: 2rem 0 2rem 0;
+  }
+  .columnManager {
+    padding-top: 1.5rem;
+  }
+  .clock-icon {
+    width: 35px;
+  }
+  .footer-logo {
+    padding: 2rem 0 2.5rem 0;
+    margin-bottom: 0;
+    width: 300px;
+  }
+}
+@media screen and (max-width: 769px) {
+  .footer {
+    padding: 2rem;
+  }
+  .columnManager {
+    padding-top: 2rem;
+  }
+  .footer-logo {
+    padding: 2rem 0 2.5rem 0;
+    margin-bottom: 0;
+    width: 250px;
+  }
+  .footer .row {
+    flex-direction: column;
   }
 }
