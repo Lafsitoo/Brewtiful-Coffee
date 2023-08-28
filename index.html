@@ -17,7 +17,7 @@
     <!-- Header -->
 
     <header>
-      <nav class="navbar navbar-expand-lg fixed-to">
+      <nav class="navbar navbar-expand-xl fixed-to">
         <div class="container-fluid">
           <button
             class="navbar-toggler"
@@ -91,7 +91,7 @@
     <!-- Main -->
 
     <main>
-      <br />
+      <div class="divider"></div>
       <div class="d-flex justify-content-center m-auto">
         <button>
           <span>Hover me</span>
@@ -100,29 +100,81 @@
     </main>
     <!-- Footer -->
 
-    <footer class="bg-dark text-light py-5">
+    <footer class="footer">
       <div class="container">
+        <hr class="rounded-5 d-none d-lg-block" />
+        <br />
         <div class="row">
-          <div class="columnas col-12 col-lg-4 d-flex justify-content-center">
-            <img src="logo.png" alt="Logo del sitio web">
-          </div>
-          <div class="columnas col-12 col-lg-4 d-flex justify-content-center">
-            <ul class="list-unstyled">
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://instagram.com/">Instagram</a></li>
+          <div class="col-12 col-lg-3 justify-content-center">
+            <h3 class="text-center">Horarios de atención</h3>
+            <img
+              class="clock-icon d-block mx-auto"
+              src="/assets/clock-icon.svg"
+              alt="Horarios de atención"
+            />
+            <ul class="list-unstyled text-center">
+              <li><span>Lunes a Viernes:</span> 8:00am - 8:00pm</li>
+              <li><span>Sábados:</span> 9:00am - 6:00pm</li>
+              <li><span>Domingos:</span> Cerrado</li>
             </ul>
           </div>
-          <div class="columnas col-12 col-lg-4 d-flex justify-content-center">
-            <ul class="list-unstyled">
-              <li><a href="https://www.facebook.com/">Facebook</a></li>
-              <li><a href="https://twitter.com/">Twitter</a></li>
-              <li><a href="https://instagram.com/">Instagram</a></li>
+          <div
+            class="column-logo col-12 col-lg-6 d-flex justify-content-center"
+          >
+            <img
+              class="footer-logo"
+              src="/assets/brewtiful-icon-footer.svg"
+              alt="Brewtiful Logo"
+            />
+          </div>
+          <div class="columnManager col-12 col-lg-3 justify-content-center">
+            <h3 class="text-center">¿Te gusta nuestro contenido?</h3>
+            <p class="text-center">
+              ¡Síguenos en redes sociales para estar al día de todas nuestras
+              novedades!
+            </p>
+            <ul class="list-unstyled d-flex flex-row justify-content-evenly">
+              <li>
+                <a href="https://www.facebook.com/">
+                  <img
+                    class="social-icon"
+                    src="/assets/facebook-icon.svg"
+                    alt="Facebook icon"
+                /></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/">
+                  <img
+                    class="social-icon"
+                    src="/assets/twitter-icon.svg"
+                    alt="Twitter icon"
+                /></a>
+              </li>
+              <li>
+                <a href="https://instagram.com/">
+                  <img
+                    class="social-icon"
+                    src="/assets/instagram-icon.svg"
+                    alt="Instagram icon"
+                /></a>
+              </li>
+              <li>
+                <a href="https://whatsapp.com/">
+                  <img
+                    class="social-icon"
+                    src="/assets/whatsapp-icon.svg"
+                    alt="WhatsApp icon"
+                /></a>
+              </li>
             </ul>
           </div>
         </div>
+        <hr class="rounded-5 d-none d-lg-block" />
+        <br />
         <div class="col-12 d-flex justify-content-center">
-          <p>Copyright © 2023. Todos los derechos reservados.</p>
+          <p class="text-center">
+            Copyright © 2023. Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>
