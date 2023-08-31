@@ -92,11 +92,383 @@
 
     <main>
       <div class="divider"></div>
-      <div class="d-flex justify-content-center m-auto">
-        <button>
-          <span>Hover me</span>
+      <!-- Carousel -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/assets/images/coffee-one.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/images/coffee-two.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/assets/images/coffee-three.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
         </button>
       </div>
+      <br />
+      <br />
+      <h2 class="title text-center">NUESTROS PRODUCTOS</h2>
+      <h5 class="subtitle text-center">
+        Todo lo que necesitas para disfrutar de un buen café
+      </h5>
+      <br />
+      <hr />
+      <!-- Cards Group -->
+      <section class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 p-5">
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/frappe-mazapán.jpg"
+              class="card-img-top"
+              alt="Frappe de mazapán"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Frappé de mazapán</h5>
+              <p class="subtitle-card">
+                Frappe cremoso y delicioso con mazapán, leche condensada y
+                caramelo.
+              </p>
+              <h6 class="card-text">Precio: $1800</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-08-29</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/crema-cúrcuma.jpg"
+              class="card-img-top"
+              alt="Crema cúrcuma"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Crema de cúrcuma</h5>
+              <p class="subtitle-card">
+                Crema dulce y cremosa con un delicioso sabor a cúrcuma, caramelo
+                y chocolate.
+              </p>
+              <h6 class="card-text">Precio: $2000</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-08-19</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/triffle-chocolate.jpg"
+              class="card-img-top"
+              alt="Triffle de chocolate"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Triffle de chocolate</h5>
+              <p class="subtitle-card">
+                Postre con capas de bizcocho de chocolate, crema de dulce de
+                leche y chocolate fundido.
+              </p>
+              <h6 class="card-text">Precio: $1700</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-07-15</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/moccaccino.jpg"
+              class="card-img-top"
+              alt="Moccaccino de chocolate"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Moccaccino</h5>
+              <p class="subtitle-card">
+                Café con leche con chocolate fundido, crema batida y chocolate
+                rallado.
+              </p>
+              <!-- Espacio momentáneo, para equilibrar las cards -->
+              <br />
+              <h6 class="card-text">Precio: $1500</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-06-09</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/matcha-green.jpg"
+              class="card-img-top"
+              alt="Matcha green"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Matcha green</h5>
+              <p class="subtitle-card">
+                Té verde en polvo con un sabor intenso y aromático, rico en
+                antioxidantes y vitaminas.
+              </p>
+              <h6 class="card-text">Precio: $1400</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-06-01</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/latte.jpg"
+              class="card-img-top"
+              alt="Latte"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Latte</h5>
+              <p class="subtitle-card">
+                Bebida de café con leche vaporizada y espuma de leche, con un
+                sabor suave y equilibrado.
+              </p>
+              <h6 class="card-text">Precio: $1500</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-05-11</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/capuchino.jpg"
+              class="card-img-top"
+              alt="Capuchino"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Capuchino</h5>
+              <p class="subtitle-card">
+                Bebida de café con espresso, leche vaporizada y espuma de leche,
+                con un sabor rico y cremoso.
+              </p>
+              <h6 class="card-text">Precio: $1450</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-04-21</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100">
+            <img
+              src="/assets/images/expreso.jpg"
+              class="card-img-top"
+              alt="Expreso"
+            />
+            <div class="card-body">
+              <h5 class="title-card">Expreso</h5>
+              <p class="subtitle-card">
+                Bebida de café concentrada con un sabor intenso y aromático,
+                ideal para despertar o recargar energías.
+              </p>
+              <h6 class="card-text">Precio: $1300</h6>
+              <hr />
+              <div class="d-flex justify-content-evenly">
+                <a href="#" class="read-more-button btn btn-primary btn-lg"
+                  >Ver más</a
+                >
+                <a href="#" class="buy-now-button btn btn-success btn-lg"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="card-footer">
+              <small class="text-date">Ingresado el: 2023-04-09</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="services">
+        <h2 class="title text-center">SERVICIOS</h2>
+        <br />
+        <section class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-5 p-5">
+          <div class="col">
+            <div class="card card-services h-100">
+              <img
+                src="/assets/coffee-cup.svg"
+                class="card-img-top img-services h-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title text-center pb-4">Tipos de Cafés</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card card-services h-100">
+              <img
+                src="/assets/take-a-way.svg"
+                class="card-img-top img-services h-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title text-center pb-4">Café al paso</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card card-services h-100">
+              <img
+                src="/assets/beans-variants.svg"
+                class="card-img-top img-services h-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title text-center pb-4">Variantes de granos</h2>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card card-services h-100">
+              <img
+                src="/assets/pastelery.svg"
+                class="card-img-top img-services h-100"
+                alt="..."
+              />
+              <div class="card-body">
+                <h2 class="card-title text-center pb-4">Pastelería</h2>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
     </main>
     <!-- Footer -->
 
