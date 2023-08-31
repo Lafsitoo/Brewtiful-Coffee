@@ -184,6 +184,7 @@ hr {
 }
 .title-card {
   font-family: Georgia, "Times New Roman", Times, serif;
+  padding-top: 1rem;
   font-size: 2rem;
   color: #2b1d1e;
 }
@@ -231,6 +232,7 @@ body > main > section.services > section > div {
 .card {
   --bs-card-spacer-y: 0;
 }
+
 .card-services {
   background-color: #b68868;
   border: none;
