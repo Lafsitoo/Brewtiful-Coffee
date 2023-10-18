@@ -73,8 +73,6 @@ const listProducts = [
   },
 ];
 
-// Convierte la lista de productos en una cadena JSON
 const productsJSON = JSON.stringify(listProducts);
 
-// Guarda la cadena JSON en el localStorage con una clave específica, por ejemplo, "products"
 localStorage.setItem("products", productsJSON);
