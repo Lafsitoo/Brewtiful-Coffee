@@ -1,10 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Obtener los productos del localStorage
   const products = JSON.parse(localStorage.getItem("products"));
   const productContainer = document.getElementById("product-container");
 
   products.forEach((product) => {
-    // Crear elementos HTML para el producto
     const productCard = document.createElement("div");
     productCard.className = "col";
     productCard.innerHTML = `
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     `;
 
-    // Agregar el producto al contenedor
     productContainer.appendChild(productCard);
   });
 });
