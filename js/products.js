@@ -5,7 +5,7 @@ const listProducts = [
     image: "/assets/images/frappe-mazapán.jpg",
     description:
       "Frappe cremoso y delicioso con mazapán, leche condensada y caramelo.",
-    price: "$1800",
+    price: "1800",
     dateEntry: "2023-08-29",
   },
   {
@@ -14,7 +14,7 @@ const listProducts = [
     image: "/assets/images/crema-cúrcuma.jpg",
     description:
       "Crema dulce y cremosa con un delicioso sabor a cúrcuma, caramelo y chocolate.",
-    price: "$2000",
+    price: "2000",
     dateEntry: "2023-08-19",
   },
   {
@@ -23,7 +23,7 @@ const listProducts = [
     image: "/assets/images/triffle-chocolate.jpg",
     description:
       "Postre con capas de bizcocho de chocolate, crema de dulce de leche y chocolate fundido.",
-    price: "$1700",
+    price: "1700",
     dateEntry: "2023-07-15",
   },
   {
@@ -32,7 +32,7 @@ const listProducts = [
     image: "/assets/images/moccaccino.jpg",
     description:
       "Café con leche con chocolate fundido, crema batida y chocolate rallado.",
-    price: "$1500",
+    price: "1500",
     dateEntry: "2023-06-09",
   },
   {
@@ -41,7 +41,7 @@ const listProducts = [
     image: "/assets/images/matcha-green.jpg",
     description:
       "Té verde en polvo con un sabor intenso y aromático, rico en antioxidantes y vitaminas.",
-    price: "$1400",
+    price: "1400",
     dateEntry: "2023-06-01",
   },
   {
@@ -50,7 +50,7 @@ const listProducts = [
     image: "/assets/images/latte.jpg",
     description:
       "Bebida de café con leche vaporizada y espuma de leche, con un sabor suave y equilibrado.",
-    price: "$1500",
+    price: "1500",
     dateEntry: "2023-05-11",
   },
   {
@@ -59,7 +59,7 @@ const listProducts = [
     image: "/assets/images/capuchino.jpg",
     description:
       "Bebida de café con espresso, leche vaporizada y espuma de leche, con un sabor rico y cremoso.",
-    price: "$1450",
+    price: "1450",
     dateEntry: "2023-04-21",
   },
   {
@@ -68,7 +68,7 @@ const listProducts = [
     image: "/assets/images/expreso.jpg",
     description:
       "Bebida de café concentrada con un sabor intenso y aromático, ideal para despertar o recargar energías.",
-    price: "$1300",
+    price: "1300",
     dateEntry: "2023-04-09",
   },
 ];
