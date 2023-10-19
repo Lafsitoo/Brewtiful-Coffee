@@ -111,3 +111,23 @@ const editProduct = (id) => {
     renderProducts(products);
   });
 };
+
+const deleteProduct = (id) => {
+  const confirmation = confirm("¿Seguro que quieres eliminar este producto?");
+
+  if (confirmation) {
+    // Encuentra el índice del producto en el array por su ID.
+    const index = products.findIndex((product) => product.id === id);
+
+    if (index !== -1) {
+      // Elimina el producto del array.
+      products.splice(index, 1);
+
+      // Guarda la lista de productos actualizada en el localStorage.
+      localStorage.setItem("products", JSON.stringify(products));
+
+      // Vuelve a renderizar la lista de productos sin el producto eliminado.
+      renderProducts(products);
+    }
+  }
+};
