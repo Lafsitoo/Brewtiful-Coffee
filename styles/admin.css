@@ -212,7 +212,7 @@ main {
   cursor: pointer;
 }
 .btn-edit:hover {
-  background-color: #ffb400;
+  background-color: #bebebe;
 }
 .btn-delete {
   background-color: #dc3545;
