@@ -11,9 +11,9 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="card-body">
           <h5 class="title-card">${product.name}</h5>
           <p class="subtitle-card">${product.description}</p>
-          <h6 class="card-text">Precio: ${product.price}</h6>
+          <h6 class="card-text">Precio: $${product.price}</h6>
           <hr />
-          <div class="d-flex justify-content-evenly">
+          <div class="d-flex justify-content-evenly pb-3">
             <a href="#" class="read-more-button btn btn-primary btn-lg">Ver más</a>
             <a href="#" class="buy-now-button btn btn-success btn-lg">Comprar</a>
           </div>

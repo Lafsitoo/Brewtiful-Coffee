@@ -232,7 +232,36 @@ body > main > section.services > section > div {
 .card {
   --bs-card-spacer-y: 0;
 }
-
+.card {
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  height: 100%; 
+}
+.card-img-top {
+  object-fit: cover; 
+  height: 200px; 
+}
+.title-card {
+  font-size: 1.5rem; 
+  font-weight: bold; 
+}
+.subtitle-card {
+  font-size: 1rem;
+}
+.card-text {
+  font-size: 1.1rem;
+  font-weight: bold; 
+}
+.read-more-button,
+.buy-now-button {
+  font-size: 1rem; 
+  padding: 10px 20px; 
+  margin: 5px; 
+}
+.text-date {
+  font-size: 0.875rem; 
+  color: #777; 
+}
 .card-services {
   background-color: #b68868;
   border: none;
