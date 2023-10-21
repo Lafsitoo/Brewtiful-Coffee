@@ -1,20 +1,21 @@
-const products = JSON.parse(localStorage.getItem("products"));
+let products = JSON.parse(localStorage.getItem("products"));
 
-// renderer productos en la tabla
 const renderProducts = (products) => {
   const tbody = document.querySelector("#tbody");
   tbody.innerHTML = "";
   products.forEach((product) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-        <td><img src="${product.image}" alt="${product.name}" class="image-product" /></td>
-        <td>${product.name}</td>
-        <td>${product.description}</td>
-        <td>$${product.price}</td>
-        <td>${product.dateEntry}</td>
-        <td>
-        <button class="btn btn-edit btn-sm" onclick="editProduct('${product.id}')"><img src="/assets/edit-icon.svg" alt="edit-icon"/></button>
+        <td class="text-center align-middle"><img src="${product.image}" alt="${product.name}" class="image-product" /></td>
+        <td class="text-center align-middle">${product.name}</td>
+        <td class="text-center col-md-4 align-middle">${product.description}</td>
+        <td class="text-center align-middle">$${product.price}</td>
+        <td class="text-center align-middle">${product.dateEntry}</td>
+        <td class="align-middle text-center">
+        <div class="d-flex justify-content-center gap-3">
+        <button class="btn-edit btn-sm" onclick="editProduct('${product.id}')"><img src="/assets/edit-icon.svg" alt="edit-icon"/></button>
         <button class="btn btn-delete btn-sm" onclick="deleteProduct('${product.id}')"><img src="/assets/delete-icon.svg" alt="delete-icon"/></button>
+        </div>
         </td>
         `;
     tbody.appendChild(tr);
@@ -23,18 +24,15 @@ const renderProducts = (products) => {
 
 renderProducts(products);
 
-// Agregar producto
 const form = document.getElementById("form");
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Obtén los valores del formulario
   const name = form.elements.name.value;
   const description = form.elements.description.value;
   const price = form.elements.price.value;
   const image = form.elements.image.value;
 
-  // Crea un nuevo producto
   const newProduct = {
     id: crypto.randomUUID(),
     name: name,
@@ -44,101 +42,121 @@ form.addEventListener("submit", (e) => {
     dateEntry: getDate(),
   };
 
-  // Obtiene la lista de productos actual desde el almacenamiento local (localStorage)
   const products = JSON.parse(localStorage.getItem("products")) || [];
 
-  // Agrega el nuevo producto a la lista
   products.push(newProduct);
 
-  // Guarda la lista de productos actualizada en el localStorage
   localStorage.setItem("products", JSON.stringify(products));
 
-  // Cierra el modal manualmente
   const modal = new bootstrap.Modal(document.getElementById("formModal"));
   modal.hide();
 
-  // Vuelve a renderizar la lista de productos
   renderProducts(products);
 
-  // Resetea el formulario
   form.reset();
 });
 
-// Editar producto
-// const editProduct = (id) => {
-//   console.log("Sufriendo para editar un producto.");
-//   // Encuentra el producto con el ID especificado.
-//   const product = products.find((product) => product.id === id);
+const editProduct = (id) => {
+  const product = products.find((product) => product.id === id);
 
-//   // Abre el modal de edición
-//   const editModal = new bootstrap.Modal(document.getElementById("formModal"));
-//   editModal.show();
+  const modal = document.createElement("div");
+  modal.className = "modal fade";
+  modal.id = "editModal";
+  modal.setAttribute("tabindex", "-1");
+  modal.setAttribute("aria-labelledby", "editModalLabel");
+  modal.setAttribute("aria-hidden", "true");
 
-//   // Rellena el formulario con los datos del producto.
-//   form.elements.name.value = product.name;
-//   form.elements.description.value = product.description;
-//   form.elements.price.value = product.price;
-//   form.elements.image.value = product.image;
-//   form.elements.dateEntry.value = product.dateEntry;
+  modal.innerHTML = `
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="editModalLabel">Editar Producto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="editForm">
+            <div class="form-group">
+              <label for="editName">Nombre:</label>
+              <input type="text" class="form-control" id="editName" value="${product.name}" required>
+            </div>
+            <div class="form-group">
+              <label for="editDescription">Descripción:</label>
+              <textarea class="form-control" id="editDescription" required>${product.description}</textarea>
+            </div>
+            <div class="form-group">
+              <label for="editPrice">Precio:</label>
+              <input type="number" class="form-control" id="editPrice" value="${product.price}" required>
+            </div>
+            <div class="form-group">
+              <label for="editImage">Imagen:</label>
+              <input type="url" class="form-control" id="editImage" value="${product.image}" required>
+            </div>
+            <input type="hidden" id="productId" value="${id}">
+          </form>
+        </div>
+        <div class="d-grid m-3">
+          <button type="button" class="btn btn-primary" onclick="saveEditedProduct()" data-bs-dismiss="modal">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  `;
 
-//   // Agrega un event listener al botón "Guardar Cambios"
-//   const saveChangesButton = document.getElementById("saveChangesButton");
-//   saveChangesButton.addEventListener("click", () => {
-//     // Obtén los valores actualizados del formulario
-//     const updatedName = form.elements.name.value;
-//     const updatedDescription = form.elements.description.value;
-//     const updatedPrice = form.elements.price.value;
-//     const updatedImage = form.elements.image.value;
-//     const updatedDateEntry = form.elements.dateEntry.value;
+  document.body.appendChild(modal);
 
-//     // Actualiza el producto en la lista de productos
-//     const updatedProduct = {
-//       id: product.id,
-//       name: updatedName,
-//       description: updatedDescription,
-//       price: updatedPrice,
-//       image: updatedImage,
-//       dateEntry: updatedDateEntry,
-//     };
+  const editModal = new bootstrap.Modal(modal);
+  editModal.show();
+};
 
-//     // Encuentra y actualiza el producto en la lista
-//     const index = products.findIndex((product) => product.id === id);
-//     if (index !== -1) {
-//       products[index] = updatedProduct;
-//     }
+const saveEditedProduct = () => {
+  const updatedName = document.getElementById("editName").value;
+  const updatedDescription = document.getElementById("editDescription").value;
+  const updatedPrice = document.getElementById("editPrice").value;
+  const updatedImage = document.getElementById("editImage").value;
+  const productId = document.getElementById("productId").value;
 
-//     // Guarda la lista de productos actualizada en el localStorage
-//     localStorage.setItem("products", JSON.stringify(products));
+  const updatedProduct = {
+    id: productId,
+    name: updatedName,
+    description: updatedDescription,
+    price: updatedPrice,
+    image: updatedImage,
+    dateEntry: getDate(),
+  };
 
-//     // Cierra el modal de edición
-//     editModal.hide();
+  const index = products.findIndex((product) => product.id === productId);
+  if (index !== -1) {
+    products[index] = updatedProduct;
+  }
 
-//     // Vuelve a renderizar la lista de productos
-//     renderProducts(products);
-//   });
-// };
+  localStorage.setItem("products", JSON.stringify(products));
+
+  const editModal = new bootstrap.Modal(document.getElementById("editModal"));
+  editModal.hide();
+
+  renderProducts(products);
+};
 
 const deleteProduct = (id) => {
-  const confirmation = confirm("¿Seguro que quieres eliminar este producto?");
+  const confirmDeleteModal = new bootstrap.Modal(document.getElementById("confirmDeleteModal"));
+  confirmDeleteModal.show();
 
-  if (confirmation) {
-    // Encuentra el índice del producto en el array por su ID.
+  const confirmDeleteButton = document.getElementById("confirmDeleteButton");
+  confirmDeleteButton.addEventListener("click", () => {
     const index = products.findIndex((product) => product.id === id);
 
     if (index !== -1) {
-      // Elimina el producto del array.
       products.splice(index, 1);
 
-      // Guarda la lista de productos actualizada en el localStorage.
       localStorage.setItem("products", JSON.stringify(products));
 
-      // Vuelve a renderizar la lista de productos sin el producto eliminado.
       renderProducts(products);
     }
-  }
+
+    confirmDeleteModal.hide();
+  });
 };
 
-// Obtener fecha actual
+
 const getDate = () => {
   const date = new Date();
   const day = date.getDate();
