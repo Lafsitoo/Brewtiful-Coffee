@@ -48,6 +48,6 @@ if (userCurrent) {
     window.location.href = "/index.html";
   });
 } else {
-  userIcon.src = "assets/user.svg";
+  userIcon.src = "/assets/user.svg";
   logoutButton.href = "/pages/login.html";
 }
