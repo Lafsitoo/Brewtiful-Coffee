@@ -162,104 +162,23 @@ main {
 }
 .title {
   font-family: Georgia, "Times New Roman", Times, serif;
-  font-size: 5.5rem;
+  font-size: 3.5rem;
   color: #2b1d1e;
 }
-.subtitle {
-  font-weight: 400;
-  color: #d8b083;
+.admin {
+  padding: 2rem 0;
 }
-hr {
-  border-color: #d8b083;
-  border-top-width: 5px;
-}
-.card-body {
-  background-color: #fbf8f5;
-  color: #2b1d1e;
-}
-.card-img-left {
-  width: 45%;
-  background: scroll center url("/assets/images/coffee-form.jpg");
-  background-size: cover;
-}
-.login-icon {
-  width: 250px;
-}
-input#floatingDate.form-control {
-  color: #2b1d1e;
-}
-select#floatingProvince.form-select {
-  color: #2b1d1e;
-}
-.form-control {
-  border: solid 1.5px #f8e5c3;
-}
-.form-control:focus {
-  border: solid 1.5px #d8b083;
-  box-shadow: 0 0 0 0.25rem #f8e5c3;
-  outline: none;
-}
-.form-label {
-  font-size: larger;
-  font-weight: 500;
-  color: #2b1d1e;
-}
-.form-select {
-  border: solid 1.5px #f8e5c3;
-}
-.form-select:focus {
-  border: solid 1.5px #d8b083;
-  box-shadow: 0 0 0 0.25rem #f8e5c3;
-  outline: none;
-}
-.error-message {
-  font-style: italic;
-  margin-left: .5rem;
-  color: #eb1515;
-  font-weight: 400;
-  font-size: 13px;
-}
-.btn-register {
-  font-size: 0.9rem;
-  letter-spacing: 0.05rem;
-  padding: 0.75rem 1rem;
-  background-color: #2b1d1e;
+.btn-delete {
+  background-color: #dc3545;
+  color: #fff;
   border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.btn-register:hover {
-  background-color: #7c523a;
-  transition-duration: 0.4s;
-  transition-timing-function: ease-in-out;
+.btn-delete:hover {
+  background-color: #c82333;
 }
-.login {
-  font-weight: 600;
-  color: #b68969;
-}
-.login.disabled {
-  cursor: not-allowed;
-}
-
-/* Responsive Main */
-@media screen and (max-width: 1024px) {
-  .divider {
-    padding: 1.4rem;
-  }
-  .title {
-    font-size: 4rem;
-  }
-  .subtitle {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 769px) {
-  .title {
-    font-size: 2.5rem;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-  }
-}
-
 /* Footer */
 .footer {
   font-family: Georgia, "Times New Roman", Times, serif;
