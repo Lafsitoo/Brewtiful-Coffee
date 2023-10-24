@@ -73,9 +73,10 @@
                     <a class="nav-link disabled" href="#">Carrito</a>
                   </li>
                 </ul>
-                <div class="icon-container">
-                  <a class="icon-button" href="/pages/login.html">
-                    <img src="/assets/user.svg" alt="Icono usuario" />
+                <div class="icon-container gap-2">
+                  <span id="user-name" class="d-flex align-items-center justify-content-center"></span>
+                  <a id="logout-button" class="icon-button">
+                    <img id="user-icon" src="/assets/user.svg" alt="Icono usuario" />
                   </a>
                   <a class="icon-button disabled" href="#">
                     <img
@@ -94,8 +95,8 @@
 
     <main>
       <div class="divider"></div>
-      <h2 class="title text-center">REGÍSTRATE</h2>
-      <h5 class="subtitle text-center">Crea una cuenta</h5>
+      <h2 class="title text-center">BIENVENIDO</h2>
+      <h5 class="subtitle text-center">¡Hola de nuevo amante del cafe!</h5>
       <br />
       <hr />
       <div class="container">
@@ -106,24 +107,21 @@
             >
               <div class="card-img-left d-none d-md-flex"></div>
               <div class="card-body p-4 p-sm-5">
-                <form>
-                  <!-- Nombre completo -->
-                  <div class="form-floating mb-3">
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="floatingInputUsername"
-                      placeholder="Nombre completo"
-                      maxlength="100"
-                      minlength="5"
-                      required
-                      autofocus
-                    />
-                    <label for="floatingInputUsername">Nombre completo</label>
+                <form id="form-login">
+                  <div
+                    class="d-flex justify-content-center align-items-center mb-5"
+                  >
+                    <div>
+                      <img
+                        class="login-icon"
+                        src="/assets/brewtiful-icon.svg"
+                        alt="login-icon"
+                      />
+                    </div>
                   </div>
 
                   <!-- Correo electrónico -->
-                  <div class="form-floating mb-3">
+                  <div class="form-floating">
                     <input
                       type="email"
                       class="form-control"
@@ -133,105 +131,23 @@
                       minlength="5"
                       required
                     />
-                    <label for="floatingInputEmail">Correo electrónico</label>
+                    <label for="floatingInputEmail">Email</label>
+                    <p id="email-error" class="error-message">&nbsp</p>
                   </div>
 
-                  <hr />
                   <!-- Contraseña -->
-                  <div class="form-floating mb-3">
+                  <div class="form-floating">
                     <input
                       type="password"
                       class="form-control"
                       id="floatingPassword"
                       placeholder="Contraseña"
                       maxlength="128"
-                      minlength="8"
+                      minlength="5"
                       required
                     />
                     <label for="floatingPassword">Contraseña</label>
-                  </div>
-                  <!-- Confirmar Contraseña -->
-                  <div class="form-floating mb-3">
-                    <input
-                      type="password"
-                      class="form-control"
-                      id="floatingPasswordConfirm"
-                      placeholder="Confirmar contraseña"
-                      maxlength="128"
-                      minlength="8"
-                      required
-                    />
-                    <label for="floatingPasswordConfirm"
-                      >Confirmar contraseña</label
-                    >
-                  </div>
-
-                  <hr />
-                  <!-- Fecha de nacimiento -->
-                  <div class="form-floating mb-3">
-                    <input
-                      type="date"
-                      class="form-control"
-                      id="floatingDate"
-                      placeholder="Fecha de nacimiento"
-                      required
-                    />
-                    <label for="floatingDate">Fecha de nacimiento</label>
-                  </div>
-
-                  <!-- Seleccionar provincia -->
-                  <div class="form-floating mb-3">
-                    <select
-                      class="form-select"
-                      id="floatingProvince"
-                      aria-label="Provincia"
-                      required
-                    >
-                      <option selected disabled>
-                        Selecciona una provincia
-                      </option>
-                      <option value="Buenos Aires">Buenos Aires</option>
-                      <option value="Catamarca">Catamarca</option>
-                      <option value="Chaco">Chaco</option>
-                      <option value="Chubut">Chubut</option>
-                      <option value="Córdoba">Córdoba</option>
-                      <option value="Corrientes">Corrientes</option>
-                      <option value="Entre Ríos">Entre Ríos</option>
-                      <option value="Formosa">Formosa</option>
-                      <option value="Jujuy">Jujuy</option>
-                      <option value="La Pampa">La Pampa</option>
-                      <option value="La Rioja">La Rioja</option>
-                      <option value="Mendoza">Mendoza</option>
-                      <option value="Misiones">Misiones</option>
-                      <option value="Neuquén">Neuquén</option>
-                      <option value="Río Negro">Río Negro</option>
-                      <option value="Salta">Salta</option>
-                      <option value="San Juan">San Juan</option>
-                      <option value="San Luis">San Luis</option>
-                      <option value="Santa Cruz">Santa Cruz</option>
-                      <option value="Santa Fe">Santa Fe</option>
-                      <option value="Santiago del Estero">
-                        Santiago del Estero
-                      </option>
-                      <option value="Tierra del Fuego">Tierra del Fuego</option>
-                      <option value="Tucumán">Tucumán</option>
-                    </select>
-                    <label for="floatingProvince">Provincia</label>
-                  </div>
-
-                  <!-- Observaciones -->
-                  <div class="mb-3 text-center">
-                    <label for="observations" class="form-label"
-                      >Observaciones</label
-                    >
-                    <textarea
-                      class="form-control"
-                      id="observations"
-                      rows="4"
-                      placeholder="¡Déjanos saber cómo te gusta tu café!"
-                      maxlength="2500"
-                      minlength="10"
-                    ></textarea>
+                    <p id="password-error" class="error-message">&nbsp</p>
                   </div>
 
                   <div class="d-grid mb-2">
@@ -239,14 +155,15 @@
                       class="btn btn-lg btn-primary btn-register fw-bold text-uppercase"
                       type="submit"
                     >
-                      Registrarme
+                      Ingresar
                     </button>
                   </div>
 
                   <p class="text-center mt-4 small">
-                    ¿Ya tienes una cuenta?
-                    <!-- Añadir un href cuando se le de funcionalidad -->
-                    <a class="login disabled">Inicia sesión</a>
+                    ¿No posees una cuenta?
+                    <a class="login" href="/pages/register.html"
+                      >Regístrate aquí</a
+                    >
                   </p>
                 </form>
               </div>
@@ -341,5 +258,7 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/login.js"></script>
+    <script src="/js/current-user.js"></script>
   </body>
 </html>
