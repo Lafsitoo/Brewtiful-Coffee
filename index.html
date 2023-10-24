@@ -71,9 +71,11 @@
                     <a class="nav-link disabled" href="#">Carrito</a>
                   </li>
                 </ul>
-                <div class="icon-container">
-                  <a class="icon-button" href="/pages/login.html">
-                    <img src="assets/user.svg" alt="Icono usuario" />
+
+                <div class="icon-container gap-2">
+                  <span id="user-name" class="d-flex align-items-center justify-content-center"></span>
+                  <a id="logout-button" class="icon-button" href="/pages/login.html">
+                    <img id="user-icon" src="assets/user.svg" alt="Icono usuario" />
                   </a>
                   <a class="icon-button disabled" href="#">
                     <img
@@ -167,9 +169,10 @@
       <br />
       <hr />
       <!-- Cards Group -->
-      <section class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 p-5 container-fluid" id="product-container">
-        
-      </section>
+      <section
+        class="row row-cols-1 row-cols-lg-4 row-cols-md-2 g-4 p-5 container-fluid"
+        id="product-container"
+      ></section>
 
       <!-- Services -->
       <section class="services">
@@ -317,6 +320,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/main.js"></script>
-    <script src="js/products.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/current-user.js"></script>
   </body>
 </html>

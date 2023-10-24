@@ -78,9 +78,32 @@ body {
   transition-timing-function: ease-in-out;
 }
 .icon-container {
-  gap: 1rem;
   display: flex;
   justify-content: space-between;
+}
+#user-name {
+  margin-right: .2rem;
+  font-size: medium;
+  font-weight: 500;
+}
+.icon-container li {
+  list-style: none;
+}
+.icon-nav {
+  width: 30px;
+  height: 30px;
+  border: none;
+}
+.user-nav {
+  color: #574942;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+.user-nav:hover {
+  color: #2b1d1e;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
 }
 .icon-button {
   display: flex;
@@ -102,6 +125,9 @@ body {
 .icon-button.disabled {
   opacity: 0.5;
   cursor: not-allowed;
+}
+.icon-button.dropdown-toggle::after {
+  content: none;
 }
 
 /* Responsive Header */
