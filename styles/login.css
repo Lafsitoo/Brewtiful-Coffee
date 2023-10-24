@@ -82,6 +82,11 @@ body {
   display: flex;
   justify-content: space-between;
 }
+#user-name {
+  margin-right: .2rem;
+  font-size: medium;
+  font-weight: 500;
+}
 .icon-button {
   display: flex;
   justify-content: center;
