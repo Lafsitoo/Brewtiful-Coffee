@@ -73,9 +73,10 @@
                     <a class="nav-link disabled" href="#">Carrito</a>
                   </li>
                 </ul>
-                <div class="icon-container">
-                  <a class="icon-button" href="/pages/login.html">
-                    <img src="/assets/user.svg" alt="Icono usuario" />
+                <div class="icon-container gap-2">
+                  <span id="user-name" class="d-flex align-items-center justify-content-center"></span>
+                  <a id="logout-button" class="icon-button">
+                    <img id="user-icon" src="/assets/user.svg" alt="Icono usuario" />
                   </a>
                   <a class="icon-button disabled" href="#">
                     <img
@@ -271,5 +272,6 @@
       integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
       crossorigin="anonymous"
     ></script>
+    <script src="/js/current-user.js"></script>
   </body>
 </html>
